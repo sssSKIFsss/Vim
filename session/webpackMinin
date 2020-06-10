@@ -1,0 +1,209 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd D:\Projects\webpack\webpackMinin
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+argglobal
+%argdel
+set stal=2
+tabnew
+tabrewind
+edit src\index.js
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+let s:l = 10 - ((9 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+10
+normal! 026|
+lcd D:\Projects\webpack\webpackMinin
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMinin\src\styles\styles.css") | buffer D:\Projects\webpack\webpackMinin\src\styles\styles.css | else | edit D:\Projects\webpack\webpackMinin\src\styles\styles.css | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+let s:l = 21 - ((20 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+21
+normal! 015|
+lcd D:\Projects\webpack\webpackMinin
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMinin\src\post.js") | buffer D:\Projects\webpack\webpackMinin\src\post.js | else | edit D:\Projects\webpack\webpackMinin\src\post.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+3
+normal! zo
+10
+normal! zo
+11
+normal! zo
+let s:l = 12 - ((11 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+12
+normal! 07|
+lcd D:\Projects\webpack\webpackMinin
+wincmd w
+exe 'vert 1resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+tabnext
+edit D:\Projects\webpack\webpackMinin\package.json
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 106 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 106 + 106) / 213)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+2
+normal! zo
+9
+normal! zo
+24
+normal! zo
+74
+normal! zo
+78
+normal! zo
+let s:l = 72 - ((43 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+72
+normal! 03|
+lcd D:\Projects\webpack\webpackMinin
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMinin\webpack.config.js") | buffer D:\Projects\webpack\webpackMinin\webpack.config.js | else | edit D:\Projects\webpack\webpackMinin\webpack.config.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+6
+normal! zo
+18
+normal! zo
+19
+normal! zo
+24
+normal! zo
+28
+normal! zo
+32
+normal! zo
+39
+normal! zo
+let s:l = 25 - ((24 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+25
+normal! 019|
+lcd D:\Projects\webpack\webpackMinin
+wincmd w
+exe 'vert 1resize ' . ((&columns * 106 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 106 + 106) / 213)
+tabnext 1
+set stal=1
+badd +79 ~\vimfiles\vimrc
+badd +38 D:\Projects\webpack\webpackMinin\package.json
+badd +16 D:\Projects\webpack\webpackMinin\src\styles\styles.css
+badd +13 D:\Projects\webpack\webpackMinin\src\post.js
+badd +5 D:\Projects\webpack\webpackMinin\webpack.config.js
+badd +2 D:\Projects\webpack\webpackMinin\src\styles\font.css
+badd +6 D:\Projects\webpack\webpackMinin\src\index.js
+badd +12 D:\Projects\webpack\webpackMinin\src\index.html
+badd +17 D:\Projects\webpack\webpackMinin\index.html
+badd +1 D:\Projects\webpack\webpackMinin\post.js
+badd +1 D:\Projects\webpack\webpackMinin\index.js
+badd +12 D:\Projects\webpack\webpackMinin\analytics.js
+badd +8 D:\Projects\webpack\webpackMy\package.json
+badd +2 D:\Projects\webpack\webpackMinin\src\assets\json.json
+badd +1 C:\
+badd +7209 D:\Guides\OS\Win\Tools\Vim\DocRu\doc\options.rux
+badd +1 D:\Projects\webpack\webpackMinin
+badd +7 D:\Projects\webpack\webpackMinin\src\assets\data.xml
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOScI
+set winminheight=0 winminwidth=0
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

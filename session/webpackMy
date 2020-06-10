@@ -1,0 +1,256 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd D:\Projects\webpack\webpackMy
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+argglobal
+%argdel
+set stal=2
+tabnew
+tabnew
+tabrewind
+edit webpack.settings.js
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=6
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+let s:l = 15 - ((14 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+15
+normal! 031|
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMy\webpack\webpack_common.js") | buffer D:\Projects\webpack\webpackMy\webpack\webpack_common.js | else | edit D:\Projects\webpack\webpackMy\webpack\webpack_common.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=7
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+17
+normal! zo
+18
+normal! zo
+19
+normal! zo
+let s:l = 28 - ((27 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+28
+normal! 07|
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMinin\webpack.config.js") | buffer D:\Projects\webpack\webpackMinin\webpack.config.js | else | edit D:\Projects\webpack\webpackMinin\webpack.config.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=4
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+6
+normal! zo
+let s:l = 12 - ((10 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+12
+normal! 0
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+tabnext
+edit D:\Projects\webpack\webpackMy\package.json
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+2
+normal! zo
+9
+normal! zo
+17
+normal! zo
+22
+normal! zo
+71
+normal! zo
+75
+normal! zo
+78
+normal! zo
+let s:l = 12 - ((11 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+12
+normal! 06|
+lcd D:\Projects\webpack\webpackMy
+tabnext
+edit D:\Projects\webpack\webpackMy\src\pug\layouts\main.pug
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+7
+normal! zo
+8
+normal! zo
+19
+normal! zo
+21
+normal! zo
+21
+normal! zo
+let s:l = 23 - ((22 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+23
+normal! 010|
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMy\webpack\webpack_dev.js") | buffer D:\Projects\webpack\webpackMy\webpack\webpack_dev.js | else | edit D:\Projects\webpack\webpackMy\webpack\webpack_dev.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=3
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 02|
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+argglobal
+if bufexists("D:\Projects\webpack\webpackMy\webpack\webpack_prod.js") | buffer D:\Projects\webpack\webpackMy\webpack\webpack_prod.js | else | edit D:\Projects\webpack\webpackMy\webpack\webpack_prod.js | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=9
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd D:\Projects\webpack\webpackMy
+wincmd w
+exe 'vert 1resize ' . ((&columns * 71 + 106) / 213)
+exe 'vert 2resize ' . ((&columns * 70 + 106) / 213)
+exe 'vert 3resize ' . ((&columns * 70 + 106) / 213)
+tabnext 1
+set stal=1
+badd +1 D:\Projects\webpack\webpackMy\webpack.settings.js
+badd +30 D:\Projects\webpack\webpackMy\package.json
+badd +21 D:\Projects\webpack\webpackMy\src\pug\layouts\main.pug
+badd +17 D:\Projects\webpack\webpackMy\webpack\webpack_common.js
+badd +1 D:\Projects\webpack\webpackMinin\webpack.config.js
+badd +1 D:\Projects\webpack\webpackMy\webpack\webpack_dev.js
+badd +1 D:\Projects\webpack\webpackMy\webpack\webpack_prod.js
+badd +16 D:\Projects\webpack\webpackMy\webpack\pug.js
+badd +4 D:\Projects\webpack(Backup)\webpackMy\package.json
+badd +3 D:\Projects\webpack\webpackMy\webpack.config.js
+badd +1 D:\Projects\webpack\webpackMy\src\pug\pages\index.pug
+badd +27 D:\Projects\webpack(Backup)\webpackMy\webpack\webpack_common.js
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOScI
+set winminheight=0 winminwidth=0
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

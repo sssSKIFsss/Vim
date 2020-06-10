@@ -1,0 +1,9 @@
+dict/
+pack/plugins/start/*
+temp/
+tmp/
+tags
+tags.lock
+tags.temp
+.vimrc.swp
+.netrwhist
